@@ -5,7 +5,7 @@ import csv
 def scrapeCompanies():
  f = open('companies.csv', 'a',newline='', encoding='utf-8')
  writer = csv.writer(f)
- for x in range(1827, 1829):
+ for x in range(1, 1829):
   page = requests.get("https://www.eu-startups.com/directory/page/" + str(x) +"/")
   soup = BeautifulSoup(page.content, 'html.parser')
   print("DEN HER SIDE:",x)
